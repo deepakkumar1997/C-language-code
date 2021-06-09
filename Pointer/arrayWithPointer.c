@@ -28,8 +28,7 @@ void sort(int *p){
 }
 int main()
 {
-    int arr[5],*p;
-    p=arr;
+    int arr[5];
     input(arr);
     printf("~~~~~ You've entered ~~~~~\n");
     output(arr);
