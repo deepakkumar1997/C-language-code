@@ -3,6 +3,8 @@
 #include<stdio.h>
 int main()
 {
+    //Partially initialized array here I'm storing 1 at index~0 and then
+    //-- [4]{5}~it means 5 stored at index 4 and like that
     int arr[5] = {1, [4]{5},[2]{3}};
     for(int i=0;i<5;i++)
     printf("Array[%d] = %d\n",i,arr[i]);
