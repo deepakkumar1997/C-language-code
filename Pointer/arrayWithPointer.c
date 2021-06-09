@@ -1,3 +1,4 @@
+//Take an array of integers and sort using bubble sort and also use pointer./
 #include<stdio.h>
 void input(int *p){
     int i;
