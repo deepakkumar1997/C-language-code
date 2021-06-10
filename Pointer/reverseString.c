@@ -14,6 +14,7 @@ char* reverseStr(char *p)
 }
 int main()
 {
-    printf("\n%s",reverseStr("DeepaK"));
+    char str[20]="Deepak-oloS";
+    printf("%s\n",reverseStr(str));
     return 0;
 }
