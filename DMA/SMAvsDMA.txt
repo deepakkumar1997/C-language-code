@@ -1,0 +1,44 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ C-language ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                
+******************************* SMA vs DMA *******************************
+
+-> Declaration statements comes under Static Memory Allocation(SMA).
+-> malloc(), calloc(), and realloc() comes under Dynamic Memory Allocation(DMA).
+-> The name malloc() stands for "memory allocation".
+-> The name calloc() stands for "contiguous allocation".
+-> The name realloc() stands for "Re-allocation".
+-> Declaration statements :-
+    eg:-
+        int var1=5;
+        float var2=5.99;
+        double var3=5665655.5645;
+        char ch='D';
+        char array[40]={"Static Memory Allocation"};
+-> Return type of malloc(), calloc(), and realloc() is void pointer(or you can say an address) 
+   so before assigning and returning these values we have to type cast of these function and 
+   type cast should be of type of pointer in which you are assigning that function.
+   like :--
+            float *p;
+            p=(float*)malloc(4);
+-> When we creates memory blocks using malloc(), calloc(), and realloc(), it only creates 
+   address of that variable, it doesn't create an identifier so you have to use pointer 
+   variables to access these variables memory block.
+-> calloc() used to create more than one memory blocks or you can say array of blocks in terms
+   of using Dynamic Memory Allocation.
+-> eg:-
+       int *p;
+       p=(int*)calloc(5,2);
+       //this means it will create 5 blocks of array with 2 byets of memory size and we all know
+       //array have contiguous memory allocation 
+-> By default memory block of malloc() contains garbage value but calloc() contains 0 in 
+   each block;
+   -> It means the malloc() function allocates memory and leaves the memory uninitialized,
+      whereas the calloc() function allocates memory and initializes all bits to zero.
+-> free() :-
+            Dynamically allocated memory created with either calloc() or malloc() doesn't
+            get freed on their own. You must explicitly use free() to release the space.
+            eg:- 
+                free(p);
+                //This statement frees the space allocated in the memory pointed by 'p'.
+-> malloc is faster than calloc.
+-> Now you can add more information regarding SMA and DMA

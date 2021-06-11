@@ -10,7 +10,7 @@ _Bool isPalindrome(char * s){
     }
     printf("%s\n",s);
     
-    //Second you have to keep only alphabets
+    //Second you have to keep only alphabets and numbers
     i=0,j=0;
     while(s[i])
     {
