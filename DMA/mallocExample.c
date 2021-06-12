@@ -4,7 +4,7 @@ int main()
 {
     float *p;// It is an exaple of Static Memory Allocation(SMA)
     //Using malloc() function we can create one memory block it is dynamic
-    p=(float*)malloc(6);//malloc() is an example Dynamic Memory Allocation(DMA)
+    p=(float*)malloc(4);//malloc() is an example Dynamic Memory Allocation(DMA)
     printf("Enter a real number : ");
     scanf("%f",p);
     *(p+1)=546.567;
