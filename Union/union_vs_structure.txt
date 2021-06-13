@@ -1,0 +1,68 @@
+************************************ Structure vs Union **************************************
+
+Here is the important difference between structure and union:->
+
+  Structure                                       	     Union
+
+-> You can use a struct keyword to define a structure.   You can use a union keyword to define a union.
+-> Every member within structure is assigned a unique    In union, a memory location is shared by all 
+   memory location.                                      the data members.
+-> Changing the value of one data member will not  	     Changing the value of one data member will 
+   affect other data members in structure.               change the value of other data members in union.
+-> It enables you to initialize several members at       It enables you to initialize only the first 
+   once.                                                 member of union.
+-> The total size of the structure is the sum of the  	 The total size of the union is the size of the
+   size of every data member.                            largest data member.
+-> It is mainly used for storing various data types. 	 It is mainly used for storing one of the many
+                                                         data types that are available.
+-> It occupies space for each and every member  	     It occupies space for a member having the 
+   written in inner parameters.                          highest size written in inner parameters.
+-> You can retrieve any member at a time. 	             You can access one member at a time in the union.
+-> It supports flexible array. 	                         It does not support a flexible array.
+
+-> Advantages of structure
+
+Here are pros/benefits for using structure:
+
+    Structures gather more than one piece of data about the same subject together in the same place.
+    It is helpful when you want to gather the data of similar data types and parameters like first name, last name, etc.
+    It is very easy to maintain as we can represent the whole record by using a single name.
+    In structure, we can pass complete set of records to any function using a single parameter.
+    You can use an array of structure to store more records with similar types.
+
+Advantages of union
+
+Here, are pros/benefits for using union:
+
+    It occupies less memory compared to structure.
+    When you use union, only the last variable can be directly accessed.
+    Union is used when you have to use the same memory location for two or more data members.
+    It enables you to hold data of only one data member.
+    Its allocated space is equal to maximum size of the data member.
+
+Disadvantages of structure
+
+Here are cons/drawbacks for using structure:
+
+    If the complexity of IT project goes beyond the limit, it becomes hard to manage.
+    Change of one data structure in a code necessitates changes at many other places. Therefore, the changes become hard to track.
+    Structure is slower because it requires storage space for all the data.
+    You can retrieve any member at a time in structure whereas you can access one member at a time in the union.
+    Structure occupies space for each and every member written in inner parameters while union occupies space for a member having the highest size written in inner parameters.
+    Structure supports flexible array. Union does not support a flexible array.
+
+Disadvantages of union
+
+Here, are cons/drawbacks for using union:
+
+    You can use only one union member at a time.
+    All the union variables cannot be initialized or used with varying values at a time.
+    Union assigns one common storage space for all its members.
+
+KEY DIFFERENCES:
+
+    Every member within structure is assigned a unique memory location while in union a memory location is shared by all the data members.
+    Changing the value of one data member will not affect other data members in structure whereas changing the value of one data member will change the value of other data members in union.
+    Structure is mainly used for storing various data types while union is mainly used for storing one of the many data types.
+    In structure, you can retrieve any member at a time on the other hand in union, you can access one member at a time.
+    Structure supports flexible array while union does not support a flexible array.
