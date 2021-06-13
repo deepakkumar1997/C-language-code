@@ -1,0 +1,139 @@
+
+************************************** C enums ************************************************
+
+In this tutorial, you will learn about enum (enumeration) in C programming with the help of examples.
+
+In C programming, an enumeration type (also called enum) is a data type that consists of integral constants.
+ To define enums, the enum keyword is used.
+
+enum flag {const1, const2, ..., constN};
+
+By default, const1 is 0, const2 is 1 and so on. You can change default values of enum elements during declaration (if necessary).
+
+// Changing default values of enum constants
+enum suit {
+    club = 0,
+    diamonds = 10,
+    hearts = 20,
+    spades = 3,
+};
+
+Enumerated Type Declaration
+
+When you define an enum type, the blueprint for the variable is created. Here's how you can create variables of enum types.
+
+enum boolean {false, true};
+enum boolean check; // declaring an enum variable
+
+Here, a variable check of the type enum boolean is created.
+
+You can also declare enum variables like this.
+
+enum boolean {false, true} check;
+
+Here, the value of false is equal to 0 and the value of true is equal to 1.
+Example: Enumeration Type
+
+#include <stdio.h>
+
+enum week {Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday};
+
+int main()
+{
+    // creating today variable of enum week type
+    enum week today;
+    today = Wednesday;
+    printf("Day %d",today+1);
+    return 0;
+}
+
+Output
+
+Day 4
+
+Why enums are used?
+
+An enum variable can take only one value. Here is an example to demonstrate it,
+
+#include <stdio.h>
+
+enum suit {
+    club = 0,
+    diamonds = 10,
+    hearts = 20,
+    spades = 3
+} card;
+
+int main() 
+{
+    card = club;
+	printf("Size of enum variable = %d bytes", sizeof(card));	
+	return 0;
+}
+
+Output
+
+Size of enum variable = 4 bytes
+
+Here, we are getting 4 because the size of int is 4 bytes.
+
+This makes enum a good choice to work with flags.
+How to use enums for flags?
+
+Let us take an example,
+
+enum designFlags {
+	ITALICS = 1,
+	BOLD = 2,
+	UNDERLINE = 4
+} button;
+
+Suppose you are designing a button for Windows application. You can set flags ITALICS, BOLD and UNDERLINE to work with text.
+
+There is a reason why all the integral constants are a power of 2 in the above pseudocode.
+
+// In binary
+
+ITALICS = 00000001
+BOLD = 00000010
+UNDERLINE = 00000100 
+
+Since the integral constants are a power of 2, you can combine two or more flags at once without overlapping using bitwise OR | operator.
+ This allows you to choose two or more flags at once. For example,
+
+#include <stdio.h>
+
+enum designFlags {
+	BOLD = 1,
+	ITALICS = 2,
+	UNDERLINE = 4
+};
+
+int main() {
+	int myDesign = BOLD | UNDERLINE; 
+
+        //    00000001
+        //  | 00000100
+        //  ___________
+        //    00000101
+
+	printf("%d", myDesign);
+
+	return 0;
+}
+
+Output
+
+5
+
+When the output is 5, you always know that bold and underline is used.
+
+Also, you can add flags according to your requirements.
+
+if (myDesign & ITALICS) {
+    // code for italics
+}
+
+Here, we have added italics to our design. Note, only code for italics is written inside the if statement.
+
+You can accomplish almost anything in C programming without using enumerations. However, they can be pretty handy in certain situations.
