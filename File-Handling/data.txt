@@ -1,0 +1,6 @@
+Data is a raw material.
+Organized and processed data is called inforationMy name is Deepak Pandey
+Data has three forms :->
+1-> Data in Rest \n
+2-> Data in Use
+3-> Data in Transit
