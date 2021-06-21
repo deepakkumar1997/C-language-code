@@ -1,0 +1,40 @@
+************************************ Bit-fields ******************************************
+
+> Bit fields are used to consume memory efficiently when we know that the value of a field or
+  group of fields will never exceed a limit or is within a small range.
+> It can be used in structure and union.
+
+e.g.->
+        struct date
+        {
+            unsigned int d; -> It will consume 4 Bytes
+            unsigned int m; -> 4 Bytes
+            unsigned int y; -> 4 Bytes
+        };
+        struct date d1;
+
+        now variable d1 of type date will take 4+4+4 = 12 Bytes of memory block in RAM but we 
+        know that in a month can't be more than 12 and a day can't exceed 31 and similarly we 
+        can assume that this code won't after year 4095-LOL. So month can fit under 4-bits i.e.
+        4- bits can store value up to 2^0 + 2^1 + 2^2 + 2^3 = 1+2+4+8 = 15 . similarly a day 
+        can fit under 31 or 5-bits just like month 4-bits = 15 and + fifth bit is 2^4 = 16
+        so 15+16 = 31 and like that 4095 can fit under 12-bits . Summation of 2^n where 
+        n=0,1,2,.....,11 and summation of 2^r = 4095.
+
+        so now we can add bit-fields into these variable of type date and we can reduce memory 
+        usage. 
+
+        struct date
+        {
+            unsigned int d:5;  -> It will comsume only 5-bits.
+            unsigned int m:4;  -> 4-bits
+            unsigned int y:12; -> 12-bits
+        }
+        struct date d1;
+
+        now variable d1 of type date will consume only 4 bytes because it work like that
+        it will be allocated all 12 Bytes to all 3 variables but it starts consuming memory
+        from right side of block so first var-y will take 12-bits and then var-m will take 
+        4-bits and then var-d will take 5-bits and you can see that 12+4+5 = 21-bits will be
+        consumed from right side of memory block of 12-bytes so 21-bits will come under last
+        4-bytes and then the last 4-bytes only be used in this program.

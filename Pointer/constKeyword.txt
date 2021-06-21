@@ -1,0 +1,51 @@
+ ********************************** const keyword **************************************
+  
+   const is a keyword in c language
+   const is a qualifier.
+   
+Qualifier : The keywords which are used to modify the properties of a variable are called type
+            qualifiers.There are two types of qualifiers available in C language. They are 
+            const,volatile
+
+            1. Const keyword : Constants are also like normal variables But only difference is
+                               their values can’t be modified by the program once they are 
+                               defined.They refer to fixed values. They are also called as 
+                               literals.
+
+            Syntax:const data_type variable_name; (or) const data_type *variable_name;
+
+            2. Volatile keyword : When a variable is defined as volatile the program may not 
+                                  change the value of the variable explicitly.But these variable
+                                  values might keep on changing without any explicit assignment
+                                  by the program These types of qualifiers are called volatile.
+
+            Syntax:volatile data_type variable_name; (or) volatile data_type *variable_name;
+
+e.g.->
+
+main()
+{
+   const int x=5;
+   x++;
+   printf("x = %d\n",x);
+}
+when we run this code this will give an error that you are trying to increment an variable 
+which has read only memory.
+
+>>Historical fact : 
+                   const was not there in early C, the concept is borrowed from C++.
+
+>>Usage : 
+         The keyword or qualifier const can be applied to any declaration statements , including
+         those of structures, unions, enumerated types or typedef names.
+
+>>Applying it to a declaration is called qualifying the declaration.
+
+>> const means that something is not modifiable.
+
+The const keyword :
+                   Variables can be declared as constants by using the “const” keyword before
+the datatype of the variable. The constant variables can be initialized once only. The default
+value of constant variables are zero.
+
+const pointer and const pointer to a const : https://www.javatpoint.com/const-pointer-in-c

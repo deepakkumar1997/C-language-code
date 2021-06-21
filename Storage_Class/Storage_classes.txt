@@ -1,0 +1,49 @@
+******************************* Storage Class ***********************************
+
+There is four types of storage class in C language : 
+        CLASS      Keyword
+    1. Automatic    auto
+    2. Register     register
+    3. Static       static
+    4. External     extern
+Lets first understand where it is required : 
+
+    int x = 5;
+
+So a variable have some properties and we can tell some of them just seeing the variable like :
+1. Name of the variable : x
+2. Size of the memory block : 4 Bytes as it is an int(Integer) type
+3. Type of the content : Integer
+ we all know that by default a variable is type of Automatic storage class
+4. So variable x is of type Automatic(auto) storage class like it is same as :
+    auto int x = 5;
+some more properties of a variable
+5. Default value stored in variable x is garbage in auto storage class auto garbage is default
+   value.
+6. Scope of variable should be depend on where it is declared so if we declare it is as global
+   then scope of the variable is in whole program means we can use this variable in whole 
+   program and if we declare it as local then we can use that variable only in that local block
+   not outside the block.
+7. Life of a variable again depends on where it is declared in a program and with which storage
+   class.
+
+A storage class represents the visibility and a location of a variable. It tells from what part
+of code we can access a variable. A storage class in C is used to describe the following things:
+
+            The variable scope.
+            The location where the variable will be stored.
+            The initialized value of a variable.
+            A lifetime of a variable.
+            Who can access a variable?
+            Thus a storage class is used to represent the information about a variable.
+
+NOTE: A variable is not only associated with a data type, its value but also a storage class.
+
+There are total four types of standard storage classes. The table below represents the storage
+classes in C.
+
+Storage class	Purpose
+auto	        It is a default storage class.
+extern	        It is a global variable.
+static	        It is a local variable which is capable of returning a value even when control is transferred to the function call.
+register	    It is a variable which is stored inside a Register.

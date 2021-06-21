@@ -1,0 +1,13 @@
+******************************* Command Line Arguments *************************************
+
+Ways to run your program :-
+
+    1. Using IDE
+    2. By double-click
+    3. Using command line
+
+Using command line we can pass some arguments at a time of runnig the program like
+$ program-name 16-4-1997 Deepak
+it will take or program will take program-name as first argument then 16-4-1997 as second 
+argument and "Deepak" as third argument and all argument will be taken as a array of characters
+or you can say as string and we can print all arguments using int argc and char *argv arguments
