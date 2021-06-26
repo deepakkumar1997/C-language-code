@@ -1,23 +1,19 @@
-/* Input radius and calculate area of triangle. */
+/* Input height and base and calculate area of triangle. */
 
 #include<stdio.h>
-#define PI 3.141
-#include<math.h>
 
-double area(double r){
-    return PI*pow(r,2);
-}
-
-double input(){
-    double r;
-    printf("Enter radius : ");
-    scanf("%lf",&r);
-    return r;
+double areaOfTriangle(float height, float base){
+    return height*base*(0.5);
 }
 
 int main(int argc, char const *argv[])
 {
     
-    printf("Area of triangle is %.2f\n",area(input()));
+    float h,b;
+    printf("Enter height : ");
+    scanf("%f",&h);
+    printf("Enter  base  : ");
+    scanf("%f",&b);
+    printf("Area of Triangle is %.2lf with height %.2f and base %.2f\n",areaOfTriangle(h,b),h,b);
     return 0;
 }
