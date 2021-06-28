@@ -9,13 +9,16 @@
 #include<stdio.h>
 
 void pattern11(int n){
-    int i,j,k;
+    int d,i,j,k;
     for(i=1; i<=n; ++i){
         for(j=n; j>i; --j)
             printf("  ");
         for(k=i; k>=1; --k)
             printf("%d ",k);
+        for(d=2; d<=i; ++d)
+            printf("%d ",d);
         printf("\b \n");
+
     }
 }
 
