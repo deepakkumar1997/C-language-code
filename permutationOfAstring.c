@@ -4,10 +4,12 @@
 #include<string.h>
 
 int permutationOfAstring(char str[]){
-    int all_possible_value_of_string = 1;
+    int all_possible_value_of_string = 1;         
     for(int i=1; i<=strlen(str); ++i)
         all_possible_value_of_string *= i;
     
+    
+
     return all_possible_value_of_string;
 }
 
