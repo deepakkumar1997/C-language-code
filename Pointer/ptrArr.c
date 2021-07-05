@@ -26,5 +26,18 @@ void main(){
         printf("%.2f ",i[ptr]);
         printf("%.2f \n",ptr[i]);
     }
+    printf("%.2f ",*++ptr);
+    printf("%.2f ",*++ptr);
+    printf("%.2f ",*--ptr);
+    printf("%.2f ",*--ptr);
+    printf("%.2f \n",*--ptr);
+
+    printf("%.2f ",*++ptr*2);// *++ptr*2 means it first incrementing ptr and then multiply 2 in valuue.
+    printf("%.2f",*ptr/5);
+    printf(" %u ",ptr++);// it will increment the address containted by ptr by one block 
+    // and now ptr pointing to next block
+    printf("%.2f ",*(ptr));// pointer is pointing to second block thus it will print 2nd value
+    printf("%.2f ",*(++ptr)); // now it is pointing to 3rd block
+    //printf("%.2f",*(ptr*1)); // In address we can't multiply anything so why it is wrong
     return;
 }

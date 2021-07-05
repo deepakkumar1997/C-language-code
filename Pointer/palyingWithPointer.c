@@ -31,8 +31,9 @@ int main(int argc, char const *argv[])
     // element or have base address.
     printf("marks :- %u\n",marks);
     printf("marks[0] :- %d\n",marks[0]);
-    printf("0[marks] :- %d\n",0[marks]);
-    printf("*(marks+3) : %d  ",*(marks+3));
+    printf("1[marks+3] :- %d // 1[marks+3] is like marks[1+3] i.e. marks[4]\n",1[marks+3]);
+    // thsi is printing value like 1[marks+3] = marks[1+3] = marks[4] = 32;
+    printf("*(marks+4) : %d  ",*(marks+4));
     printf("4[marks] : %d\n",4[marks]);
     return 0;
 }
